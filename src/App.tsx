@@ -16,6 +16,7 @@ import { Header } from './components/Header'
 import { Socials } from './components/Socials'
 import { About } from './components/About'
 import { Project } from './components/Project'
+import { Nav } from "./components/Nav"
 import { projects } from "./lib/projects"
 import pdf from './assets/pdf/resume.pdf'
 
@@ -64,7 +65,7 @@ export const App = () => {
           templateAreas={`"socials header"
                   "main main"
                   "footer footer"`}
-          gridTemplateRows={'15vh 1fr'}
+          gridTemplateRows={'fit-content 1fr'}
           gridTemplateColumns={'23vw 1fr'}
           color='blackAlpha.700'
           fontWeight='bold'

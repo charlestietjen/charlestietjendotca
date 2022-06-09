@@ -8,7 +8,7 @@ import { ContactModal } from "../ContactModal"
 export const Socials = () => {
     const { isOpen, onOpen, onClose, } = useDisclosure()
     return (
-        <Box marginTop={5}>
+        <Box marginTop={[1,null,5]}>
             <Button onClick={onOpen} bgColor='#FF8B00' height={['10vh','12vh']} width={['fit-content', null, null, '15vw']}>
                 <Stack fontSize={['smaller', 'x-large']}>
                     <Text textAlign='center' color='black'>
