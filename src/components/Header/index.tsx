@@ -4,19 +4,16 @@ import { Nav } from "../Nav"
 
 export const Header = () => {
     return (
-        <Stack>
-            <Link as={RouterLink} to='/'>
-                <Heading
-                    bgGradient='linear-gradient(90deg, rgba(68,68,68,1) 39%, rgba(254,255,219,1) 89%)'
-                    bgClip='text'
-                    fontWeight='800'
-                    fontSize={['1.5em', '2em', '3em']}
-                    p={[6, null, 8]}
-                >
-                    Charles Tietjen
-                </Heading>
-            </Link>
-            <Nav />
-        </Stack>
+        <Link as={RouterLink} to='/'>
+            <Heading
+                bgGradient='linear-gradient(90deg, rgba(68,68,68,1) 39%, rgba(254,255,219,1) 89%)'
+                bgClip='text'
+                fontWeight='800'
+                fontSize={['1.5em', '2em', '3em']}
+                textAlign='center'
+            >
+                Charles Tietjen
+            </Heading>
+        </Link>
     )
 }
