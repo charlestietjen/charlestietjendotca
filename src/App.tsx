@@ -20,18 +20,14 @@ import { Work } from "./pages/Work"
 import { Contact } from "./pages/Contact"
 import { Nav } from "./components/Nav"
 import pdf from './assets/pdf/resume.pdf'
-
-const Landing = () => {
-  return (
-    <Center>
-      <Stack gap={10}>
-        <About />
-      </Stack>
-    </Center>
-  )
-}
+import { FaWindowMinimize } from "react-icons/fa"
+import { KitchenGoblin } from "./pages/KitchenGoblin"
+import { SpacedOut } from "./pages/SpacedOut"
+import { NotDiscord } from "./pages/NotDiscord"
+import { CMS } from './pages/CMS'
 
 export const App = () => {
+  const [wHeight, setWHeight] = React.useState(window.innerHeight)
   const theme = extendTheme({
     config: {
       initialColorMode: "light",
@@ -48,6 +44,14 @@ export const App = () => {
       heading: "Noto Sans",
     }
   })
+  React.useEffect(() => {
+    function handleResize() {
+      setWHeight(window.innerHeight)
+    
+}
+
+    window.addEventListener('resize', handleResize)
+  })
   return (
     <ChakraProvider theme={theme}>
       <Grid
@@ -55,8 +59,8 @@ export const App = () => {
                         "nav"`,
                       `nav
                       content`]}
-        h='100vh'
-        gridTemplateRows={['90% 10%', null, '10% 90%']}
+        h={window.innerHeight}
+        gridTemplateRows={['88% 12%', null, '10% 90%']}
       >
         {/* main */}
         <GridItem w='100%' justifySelf='center' alignSelf='center' area={['content',null,'nav']}>
@@ -64,11 +68,15 @@ export const App = () => {
             <Route path='/blog' element={<Blog />} />
             <Route path='/work' element={<Work />} />
             <Route path='/contact' element={<Contact />} />
+            {/* <Route path='/kitchengoblin' element={<KitchenGoblin />} /> */}
+            {/* <Route path='/spacedout' element={<SpacedOut />} /> */}
+            {/* <Route path='/notdiscord' element={<NotDiscord />} /> */}
+            <Route path='/itsbloggintime' element={<CMS />} />
             <Route path="*" element={<About />} />
           </Routes>
         </GridItem>
         {/* nav */}
-        <GridItem area={['nav', null, 'content']}>
+        <GridItem zIndex={5} area={['nav', null, 'content']}>
           <Nav />
         </GridItem>
       </Grid>

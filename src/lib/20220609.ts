@@ -11,5 +11,5 @@ export const entry20220609 = {
             text: "That's it for today, brief post because it's already very late."
         }
     ],
-    date: new Date(2022,7,9),
+    date: new Date(2022,5,9),
 }

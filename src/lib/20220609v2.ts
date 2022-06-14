@@ -8,5 +8,5 @@ export const entry20220609v2 = {
             text: "There's still some styling tweaks to make and I'm not in love with the color scheme but the site is functional and, in my opinion, presentable."
         }
     ],
-    date: new Date(2022,7,9),
+    date: new Date(2022,5,9),
 }

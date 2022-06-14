@@ -1,14 +1,14 @@
 import { Box, Heading, Container, Text, Stack, Tag, Image } from "@chakra-ui/react"
 import dayjs from 'dayjs';
 
-export const BlogEntry = ({ entry }: { entry: { title: string; body: { text: string; image?: string; }[]; date: Date; } }) => {
+export const BlogEntry = ({ entry }: { entry: { title: string; body: { text: string; image?: string; }[]; createdAt: Date; } }) => {
     return (
-        <Box width={['80vw', null, '50vw']} bg='whiteAlpha.800' borderRadius={'md'} pt={1} mt={10} pb={2} boxShadow={'dark-lg'}>
+        <Box w={['90vw', null, '55vw']} bg='whiteAlpha.800' borderRadius={'md'} pt={1} mt={['15vh', null, '10vh']} pb={2} boxShadow={'dark-lg'}>
             <Stack m={5} gap={2}>
                 <Heading fontSize={['x-large','xx-large']}>
                     {entry.title}
                 </Heading>
-                <Tag fontSize={['small','small']} variant='solid' w='fit-content'>{dayjs(entry.date).format('DD MMM YYYY')}</Tag>
+                <Tag fontSize={['small','small']} variant='solid' w='fit-content'>{dayjs(entry.createdAt).format('DD MMM YYYY')}</Tag>
                 <Container alignSelf='center'>
                     <Stack gap={2}>
                     {entry.body.map(({ text, image }, i) => (

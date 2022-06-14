@@ -10,7 +10,7 @@ export const Nav = () => {
         setNavState(location.pathname)
     }, [location])
     return (
-        <Flex bg='blackAlpha.500' color='white' boxShadow={'dark-lg'} h='100%' w='100%' justifyContent={'space-evenly'}>
+        <Flex bg='#40394A' zIndex={1} color='white' boxShadow={'dark-lg'} h='100%' w='100%' justifyContent={'space-evenly'}>
             <Link border={'solid thin white'} w='100%' h='100%' alignSelf='center' as={RouterLink} to={'/work'}>
                 <Box>
                     <Text marginTop={3} textAlign='center'>My Work</Text>

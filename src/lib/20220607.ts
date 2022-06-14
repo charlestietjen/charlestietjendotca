@@ -12,5 +12,5 @@ export const entry20220607 = {
             image:"/20220607-01.png"
         }
     ],
-    date: new Date(2022,7,7),
+    date: new Date(2022,5,7),
 }

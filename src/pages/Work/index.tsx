@@ -4,10 +4,10 @@ import { projects } from "../../lib/projects"
 
 export const Work = () => {
     return (
-        <Box w='100vw'>
-            <Stack scrollSnapType={'y mandatory'} maxH='90vh' pt={10} overflowY={'scroll'} align='center' gap={20}>
+        <Box h='100vh' scrollSnapType={'y mandatory'} overflowY={'scroll'}>
+            <Stack h={'100vh'} align='center'>
                 {projects.map((project, i) => (
-                    <Box key={i} scrollSnapAlign='center'>
+                    <Box scrollSnapAlign='start' key={i} pb={'30vh'}>
                         <Project key={i} project={project} />
                     </Box>
                 ))}

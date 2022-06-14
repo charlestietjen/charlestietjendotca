@@ -11,5 +11,5 @@ export const entry20220606 = {
             text:"The portfolio is slowly coming together...I'll likely mix in some game dev nonsense here too, just to spice things up. Until tomorrow!"
         }
     ],
-    date: new Date(2022,7,6),
+    date: new Date(2022,5,6),
 }
