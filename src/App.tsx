@@ -1,26 +1,18 @@
 import * as React from "react"
 import './App.css'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import {
   ChakraProvider,
-  Box,
-  Text,
-  Stack,
   extendTheme,
-  DarkMode,
   Grid,
   GridItem,
-  Center,
-  Flex
 } from "@chakra-ui/react"
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5'
 import { Routes, Route } from "react-router-dom"
 import { Blog } from './pages/Blog'
 import { About } from './pages/About'
 import { Work } from "./pages/Work"
 import { Contact } from "./pages/Contact"
 import { Nav } from "./components/Nav"
-import pdf from './assets/pdf/resume.pdf'
-import { FaWindowMinimize } from "react-icons/fa"
 import { KitchenGoblin } from "./pages/KitchenGoblin"
 import { SpacedOut } from "./pages/SpacedOut"
 import { NotDiscord } from "./pages/NotDiscord"
@@ -46,8 +38,7 @@ export const App = () => {
   })
   React.useEffect(() => {
     function handleResize() {
-      setWHeight(window.innerHeight)
-    
+      setWHeight(window.innerHeight) 
 }
 
     window.addEventListener('resize', handleResize)
@@ -59,7 +50,7 @@ export const App = () => {
                         "nav"`,
                       `nav
                       content`]}
-        h={window.innerHeight}
+        h={wHeight}
         gridTemplateRows={['88% 12%', null, '10% 90%']}
       >
         {/* main */}
@@ -68,9 +59,9 @@ export const App = () => {
             <Route path='/blog' element={<Blog />} />
             <Route path='/work' element={<Work />} />
             <Route path='/contact' element={<Contact />} />
-            {/* <Route path='/kitchengoblin' element={<KitchenGoblin />} /> */}
-            {/* <Route path='/spacedout' element={<SpacedOut />} /> */}
-            {/* <Route path='/notdiscord' element={<NotDiscord />} /> */}
+            <Route path='/kitchengoblin' element={<KitchenGoblin />} />
+            <Route path='/spacedout' element={<SpacedOut />} />
+            <Route path='/notdiscord' element={<NotDiscord />} />
             <Route path='/itsbloggintime' element={<CMS />} />
             <Route path="*" element={<About />} />
           </Routes>

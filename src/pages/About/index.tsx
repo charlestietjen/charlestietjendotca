@@ -5,12 +5,12 @@ import resume from '../../assets/pdf/resume.pdf'
 
 export const About = () => {
     return (
-        <Stack maxH='100vh' overflowY='scroll' align='center' gap={3} pb={'10vh'}>
+        <Stack maxH='100vh' overflowY='scroll' align='center' gap={'15vh'} pb={'10vh'}>
             <Box mt={['15vh', null, '10vh']} bg='whiteAlpha.800' w={['90vw',null,'55vw']} p={7} borderRadius={'md'} boxShadow={'dark-lg'}>
                 <Heading textAlign='center' textShadow={'1px 1px #000000'}>Charles Tietjen</Heading>
                 <Heading fontSize={['x-large']} textAlign='center' textShadow={'1px 1px #000000'} m={3}>Full Stack Developer</Heading>
                 <SimpleGrid columns={[1, null, 2]}>
-                    <Image alt={`Charles Tietjen and his son.`} justifySelf='center' boxShadow={'2xl'} borderRadius={'md'} boxSize={['50vw', null, '20vw']} m={4} src={aboutMeImage} />
+                    <Image alt={`Charles Tietjen and his son.`} justifySelf='center' boxShadow={'dark-lg'} border={'solid gray thin'} borderRadius={'100%'} boxSize={['50vw', null, '20vw']} m={4} src={aboutMeImage} />
                     <Container alignSelf='center'>
                         <Stack fontSize='md' gap={2}>
                             <Text>
