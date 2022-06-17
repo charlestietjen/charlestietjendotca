@@ -68,7 +68,7 @@ export const projects = [
     {
         id: 'spacedout',
         name: `SpacedOut - Group Project 2`,
-        blurb: `Metal health focused 'anti'-social media platform.`,
+        blurb: `Mental health focused anonymous social media platform.`,
         gitUrl: `https://github.com/charlestietjen/Trilogy-Group-Project-2-SpacedOut`,
         deployUrl: `https://spaced-problems.herokuapp.com/`,
         image: `spaced-out.png`,

@@ -7,11 +7,13 @@ export const Project = ({ project }: { project: { name: string; blurb: string; g
     return (
         <Box maxW={['90vw', null, '55vw']} bg='whiteAlpha.800' borderRadius={'md'} p={4} boxShadow={'dark-lg'}>
             <Stack p={4} gap={3}>
-                <Heading textAlign={'center'} textShadow={'1px 1px #000000'} m={3}>
+                <Heading textAlign={'center'} fontSize={['x-large',null,'xxx-large']} textShadow={'1px 1px #000000'} m={3}>
                     {project.name}
                 </Heading>
                 <SimpleGrid h={['100%']} columns={2} gap={0}>
-                    <Image alt={`Deployed ${project.name}`} alignSelf='center' boxShadow={'2xl'} borderRadius={'md'} maxH={['25vmax']} maxW={['60%']} m={'auto'} src={`/assets/image/${project.image}`} />
+                    <Box>
+                        <Image alt={`Deployed ${project.name}`} boxShadow={'2xl'} borderRadius={'md'} maxW={['60%']} m={'auto'} src={`/assets/image/${project.image}`} />
+                    </Box>
                     <Box h='100%' mt={['40%', null, '10%']}>
                         <Carousel showThumbs={false} showIndicators={false} showStatus={false} infiniteLoop={true} showArrows={false} autoPlay>
                             {project.icons.map((icon, i) => (
@@ -26,7 +28,7 @@ export const Project = ({ project }: { project: { name: string; blurb: string; g
                 <SimpleGrid alignSelf='center' columns={2} gap={10}>
                     <Link boxShadow='dark-lg' bg='#C70A80' color='black' p={1} borderRadius={8} w='fit-content' href={project.deployUrl} isExternal>
                         <Text fontSize={['md', null, 'lg']}>
-                            Deployed 
+                            Deployed
                             <Icon ml={2} as={FaExternalLinkAlt} />
                         </Text>
                     </Link>
