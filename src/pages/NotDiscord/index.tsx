@@ -1,7 +1,11 @@
+import { useEffect } from 'react'
 import { Stack, Box, Container, Image, SimpleGrid, Icon } from '@chakra-ui/react'
 import { FaChevronDown } from 'react-icons/fa'
 
 export const NotDiscord = () => {
+    useEffect(() => {
+        document.title = 'Not-Discord'
+    }, [])
     return (
         <Stack maxH='100vh' overflowY='scroll' scrollSnapType={'y mandatory'} align='center' gap={3} pb={'10vh'}>
             <Box mt={['15vh', null, '10vh']} bg='whiteAlpha.800' w={['90vw', null, '55vw']} p={7} borderRadius={'md'} boxShadow={'dark-lg'}>

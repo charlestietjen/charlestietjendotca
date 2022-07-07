@@ -17,6 +17,7 @@ import { KitchenGoblin } from "./pages/KitchenGoblin"
 import { SpacedOut } from "./pages/SpacedOut"
 import { NotDiscord } from "./pages/NotDiscord"
 import { CMS } from './pages/CMS'
+import { GoblinRunner } from "./pages/GoblinRunner"
 
 export const App = () => {
   const [wHeight, setWHeight] = React.useState(window.innerHeight)
@@ -63,6 +64,7 @@ export const App = () => {
             <Route path='/spacedout' element={<SpacedOut />} />
             <Route path='/notdiscord' element={<NotDiscord />} />
             <Route path='/itsbloggintime' element={<CMS />} />
+            <Route path='/goblinrunner' element={<GoblinRunner />} />
             <Route path="*" element={<About />} />
           </Routes>
         </GridItem>

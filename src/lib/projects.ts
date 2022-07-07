@@ -7,6 +7,7 @@ import react from '../assets/image/reacticon.svg'
 import socketio from '../assets/image/socketioicon.svg'
 import mysql from '../assets/image/mysqlicon.svg'
 import handlebars from '../assets/image/handlebarsicon.svg'
+import godot from '../assets/image/godoticon.svg'
 
 export const projects = [
     {
@@ -40,6 +41,19 @@ export const projects = [
             src: chakraui,
             label: 'Chakra UI'
         }],
+    },
+    {
+        id: 'goblinrunner',
+        name: 'Goblin Runner',
+        blurb: 'Goblin Runner is a 2D infinite runner game built in Godot game engine.',
+        gitUrl: `https://github.com/charlestietjen/goblin-runner/`,
+        deployUrl: `http://charlestietjen.ca/goblinrunner`,
+        image: `goblin-runner.png`,
+        icons: [{
+            src: godot,
+            label: 'Godot Game Engine'
+        }]
+
     },
     {
         id: 'notdiscord',

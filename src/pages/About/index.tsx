@@ -1,9 +1,13 @@
+import { useEffect } from 'react'
 import { Heading, Box, Stack, SimpleGrid, Container, Image, Text } from "@chakra-ui/react"
 import aboutMeImage from '../../assets/image/aboutme.jpg'
 import { Document, Page } from "react-pdf"
 import resume from '../../assets/pdf/resume.pdf'
 
 export const About = () => {
+    useEffect(() => {
+        document.title = 'Charles Tietjen - Full Stack Developer'
+    }, [])
     return (
         <Stack maxH='100vh' overflowY='scroll' align='center' gap={'15vh'} pb={'10vh'}>
             <Box mt={['15vh', null, '10vh']} bg='whiteAlpha.800' w={['90vw',null,'55vw']} p={7} borderRadius={'md'} boxShadow={'dark-lg'}>

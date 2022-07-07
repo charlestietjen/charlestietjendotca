@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Box, Container, Text, SimpleGrid, Image, Heading, Stack, Icon, Button } from "@chakra-ui/react"
 import { FaChevronDown } from 'react-icons/fa'
 import { Carousel } from "react-responsive-carousel"
@@ -9,6 +10,9 @@ import node from '../../assets/image/nodeicon.svg'
 import react from '../../assets/image/reacticon.svg'
 
 export const KitchenGoblin = () => {
+    useEffect(() => {
+        document.title = 'Kitchen Goblin'
+    }, [])
     return (
         <Stack maxH='100vh' overflowY='scroll' scrollSnapType={'y mandatory'} align='center' gap={3} pb={'10vh'}>
             <Box mt={['15vh', null, '10vh']} bg='whiteAlpha.800' w={['90vw', null, '55vw']} p={7} borderRadius={'md'} boxShadow={'dark-lg'}>

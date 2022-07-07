@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Heading, Icon, Box, Stack, FormControl, FormLabel, FormHelperText, FormErrorMessage, Link, SimpleGrid, Text, Input, Textarea, Button } from "@chakra-ui/react"
 import { FaLinkedin, FaGithub, FaTwitch } from "react-icons/fa"
 
@@ -16,6 +16,9 @@ export const Contact = () => {
         if (!body) return
         window.open(`mailto:tietjen.charles@gmail.com?subject=${subject}&body=${body}%0A%0ARegards,%0A%0A${name}`)
     }
+    useEffect(() => {
+        document.title = 'Contact me'
+    }, [])
     return (
         <Box w={'100vw'}>
             <Stack align='center' overflowY='scroll'>

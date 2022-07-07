@@ -1,6 +1,10 @@
+import { useEffect } from 'react'
 import { Stack, Box, Image, Container } from '@chakra-ui/react'
 
 export const SpacedOut = () => {
+    useEffect(() => {
+        document.title = 'spacedOut'
+    }, [])
     return (
         <Stack maxH='100vh' overflowY='scroll' scrollSnapType={'y mandatory'} align='center' gap={3} pb={'10vh'}>
             <Box mt={['15vh', null, '10vh']} bg='whiteAlpha.800' w={['90vw', null, '55vw']} p={7} borderRadius={'md'} boxShadow={'dark-lg'}>

@@ -5,6 +5,7 @@ import { BlogEntry } from "../../components/BlogEntry"
 export const Blog = () => {
     const [blogsState, setBlogsState] = useState([{ title: '', body: [{text: ''}], createdAt: new Date(), image: ''}])
     useEffect(() => {
+        document.title = 'The Blog'
         fetch('/api/blog')
         .then(res => res.json()
         .then(data => {
