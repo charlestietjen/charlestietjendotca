@@ -60,7 +60,6 @@ export const projects = [
         name: 'Not-Discord/Goblin Hours',
         blurb: 'A server/client bundle for a simple text/emoji only chat service built using React, Socket.io and Express.',
         gitUrl: `https://github.com/charlestietjen/Socket-Chat-Project/`,
-        deployUrl: `https://not-discord-chat-server.herokuapp.com/`,
         image: `not-discord.png`,
         icons: [{
             src: react,
@@ -84,7 +83,6 @@ export const projects = [
         name: `SpacedOut - Group Project 2`,
         blurb: `Mental health focused anonymous social media platform.`,
         gitUrl: `https://github.com/charlestietjen/Trilogy-Group-Project-2-SpacedOut`,
-        deployUrl: `https://spaced-problems.herokuapp.com/`,
         image: `spaced-out.png`,
         icons: [{
             src: handlebars,

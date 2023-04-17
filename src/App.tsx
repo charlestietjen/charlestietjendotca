@@ -28,7 +28,8 @@ export const App = () => {
     styles: {
       global: {
         body: {
-          bg: 'linear-gradient(180deg, rgba(55,226,213,1) 23%, rgba(162,87,167,1) 71%)'
+          bg: 'linear-gradient(180deg, rgba(55,226,213,1) 23%, rgba(162,87,167,1) 71%)',
+          color: '#303030'
         }
       },
     },

@@ -2,12 +2,11 @@ import { Box, SimpleGrid, Stack, Heading, Container, Text, Image, Link, Icon } f
 import { Link as RouterLink } from 'react-router-dom'
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { Carousel } from "react-responsive-carousel";
-import { projects } from "../../lib/projects";
-export const Project = ({ project }: { project: { name: string; blurb: string; gitUrl: string; deployUrl: string; image: string; id: string; icons: { src: string; label: string; }[]; } }) => {
+export const Project = ({ project }: { project: { name: string; blurb: string; gitUrl: string; deployUrl?: string; image: string; id: string; icons: { src: string; label: string; }[]; } }) => {
     return (
         <Box maxW={['90vw', null, '55vw']} bg='whiteAlpha.800' borderRadius={'md'} p={4} boxShadow={'dark-lg'}>
             <Stack p={4} gap={3}>
-                <Heading textAlign={'center'} fontSize={['x-large',null,'xxx-large']} textShadow={'1px 1px #000000'} m={3}>
+                <Heading textAlign={'center'} fontSize={['x-large', null, 'xxx-large']} textShadow={'1px 1px #000000'} m={3}>
                     {project.name}
                 </Heading>
                 <SimpleGrid h={['100%']} columns={2} gap={0}>
@@ -26,12 +25,14 @@ export const Project = ({ project }: { project: { name: string; blurb: string; g
                     </Box>
                 </SimpleGrid>
                 <SimpleGrid alignSelf='center' columns={2} gap={10}>
-                    <Link boxShadow='dark-lg' bg='#C70A80' color='black' p={1} borderRadius={8} w='fit-content' href={project.deployUrl} isExternal>
-                        <Text fontSize={['md', null, 'lg']}>
-                            Deployed
-                            <Icon ml={2} as={FaExternalLinkAlt} />
-                        </Text>
-                    </Link>
+                    {project.deployUrl ? (
+                        <Link boxShadow='dark-lg' bg='#C70A80' color='black' p={1} borderRadius={8} w='fit-content' href={project.deployUrl} isExternal>
+                            <Text fontSize={['md', null, 'lg']}>
+                                Deployed
+                                <Icon ml={2} as={FaExternalLinkAlt} />
+                            </Text>
+                        </Link>
+                    ) : ('')}
                     <Link boxShadow='dark-lg' bg='#C70A80' color='black' p={1} borderRadius={8} w='fit-content' href={project.gitUrl} isExternal>
                         <Text fontSize={['md', null, 'lg']}>
                             Repository
